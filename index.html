@@ -20,6 +20,7 @@
 	<script>
 		const params = new URLSearchParams(window.location.search);
 		const redirectUrl = params.get('redirect');
-		document.getElementById('pulpoFrame').src = `https://engine.pulpoar.com${redirectUrl}`
+		const isQr = params.get('qr');
+		document.getElementById('pulpoFrame').src = `https://engine.pulpoar.com${redirectUrl}&qr=${isQr}`
     </script>
 </html>
